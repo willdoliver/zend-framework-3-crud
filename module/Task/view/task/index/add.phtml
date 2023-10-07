@@ -1,0 +1,39 @@
+<?php
+    $title = 'Add New Task';
+    $this->headTitle($title);
+
+?>
+
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+
+<?php if($message): ?>
+    <div class="messages">
+        <p><?php echo $message; ?></p>
+    </div>
+<?php endif; ?>
+
+<?php
+    $form->setAttribute('action', $this->url('task', ['action' => 'add']));
+    $form->prepare();
+?>
+
+<?php
+    echo $this->form()->openTag($form);
+    echo $this->formHidden($form->get('id'));
+?>
+<br>
+<?php
+    echo $this->formRow($form->get('title'));
+?>
+<br>
+<?php
+    echo $this->formRow($form->get('description'));
+?>
+<br>
+<?php
+    echo $this->formRow($form->get('status'));
+?>
+<br>
+<?php
+    echo $this->formSubmit($form->get('submit'));
+?>

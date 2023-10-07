@@ -1,0 +1,53 @@
+<div class="jumbotron">
+    <h1>Welcome to <span class="zf-green">Task Manager</span></h1>
+    
+</div>
+
+<?php if($message): ?>
+    <div class="messages">
+        <p><?php echo $message; ?></p>
+    </div>
+<?php endif; ?>
+
+<div class="create-task">
+    <a href="<?php echo $this->url('task',['action' => 'add']); ?>" class="btn btn-primary">New Task</a>
+</div>
+
+<div class="row">
+    <table class="table table-hover">
+        <tr>
+            <th>Task</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+        <?php if(count($tasks)>0 ): ?>
+            <?php foreach($tasks as $task): ?>
+                <tr>
+                    <td><?php echo $task->getTitle(); ?></td>
+                    <td><?php echo $task->getDescription(); ?></td>
+                    <td><?php echo $task->getStatus(); ?></td>
+                    <td>
+                        <a href="<?php echo $this->url('task',[
+                            'action' => 'view',
+                            'id' => $task->getId()
+                        ]); ?>" class="btn btn-success">Details</a>
+                        <a href="<?php echo $this->url('task',[
+                            'action' => 'edit', 
+                            'id' => $task->getId()
+                        ]); ?>" class="btn btn-warning">Update</a>
+                        <a href="<?php echo $this->url('task',[
+                            'action' => 'delete',
+                            'id' => $task->getId()
+                        ]); ?>" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <tr>
+                <td>No Tasks found</td>
+            </tr>
+        <?php endif; ?>
+
+    </table>
+</div>
