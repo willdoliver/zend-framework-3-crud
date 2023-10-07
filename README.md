@@ -1,16 +1,32 @@
 # ZendSkeletonApplication
 
-> ## Repository abandoned 2019-12-31
->
-> This repository has moved to laminas/laminas-skeleton-installer.
+## Task Manager Dashboard
+<img width="1136" alt="Screen Shot 2023-10-07 at 01 54 17" src="https://github.com/willdoliver/zend-framework-3-crud/assets/23060351/6882910a-2d32-4be2-a9fd-8682698ed3fc">
 
-## Introduction
 
-This is a skeleton application using the Zend Framework MVC layer and module
-systems. This application is meant to be used as a starting place for those
-looking to get their feet wet with Zend Framework.
+## Create Task
+<img width="500" alt="Screen Shot 2023-10-07 at 01 54 28" src="https://github.com/willdoliver/zend-framework-3-crud/assets/23060351/f75797fb-7a45-4804-a45e-c0074bddfcb7">
 
-## Installation using Composer
+
+## View Task Detailed
+<img width="1209" alt="Screen Shot 2023-10-07 at 01 55 40" src="https://github.com/willdoliver/zend-framework-3-crud/assets/23060351/6edad500-fceb-42e6-8db3-bddcefc4e5d3">
+
+
+## Update Task
+<img width="628" alt="Screen Shot 2023-10-07 at 01 55 59" src="https://github.com/willdoliver/zend-framework-3-crud/assets/23060351/fbd3354c-8cfa-4ff2-b0e5-b0e1aad9abe4">
+
+
+## Delete Task
+<img width="1203" alt="Screen Shot 2023-10-07 at 01 56 31" src="https://github.com/willdoliver/zend-framework-3-crud/assets/23060351/f0f079a8-1394-4af4-b079-47e06e6dea96">
+
+
+## TODO List:
+- Unit Tests
+- Pagination
+- Filter & Search
+- Email feature for reminders
+
+## About Zend Framework
 
 The easiest way to create a new Zend Framework project is to use
 [Composer](https://getcomposer.org/).  If you don't have it already installed,
